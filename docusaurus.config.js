@@ -93,11 +93,11 @@ const config = {
               },
               {
                 label: "How to use",
-                to: "/docs/how-to-use",
+                to: "/docs/category/how-to-use",
               },
               {
                 label: "Transpiler",
-                to: "/docs/transpiler",
+                to: "/docs/category/transpiler",
               },
             ],
           },
