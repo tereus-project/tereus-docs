@@ -1,0 +1,108 @@
+# Supported features
+
+- Variables
+  - [x] Declaration
+  - [x] Initialization
+  - [x] Assignment
+  - [x] Automatic type conversion
+  - [x] Variable list
+  - [ ] Array variables declaration
+- Functions
+  - [ ] Declaration with no definition
+  - [x] Declaration with definition
+  - [x] Arguments
+- Types
+  - [x] Pointers
+  - [ ] Arrays
+  - Structures
+    - [x] Declaration with no definition
+    - [x] Declaration with definition
+    - [x] Initialization
+  - [ ] Unions
+  - [x] Enums
+  - [ ] Typedefs
+- Statements
+  - [x] `if`
+  - [x] `for`
+  - [ ] `do`
+  - [x] `while`
+  - [ ] `switch`
+  - [ ] `case`
+  - [ ] `default`
+  - [x] `break`
+  - [ ] `continue`
+  - [x] `return`
+  - [x] `goto`
+- Expressions
+  - [x] Array indexing
+  - [x] List initialization
+  - [x] Structure property access
+  - [x] Pointer property access
+  - [x] Function call
+  - [x] Type casting
+- Arithmetic
+  - [x] Addition (+)
+  - [x] Subtraction (-)
+  - [x] Multiplication (\*)
+  - [x] Division (/)
+  - [x] Modulo (%)
+  - [x] Prefix increment (++)
+  - [x] Prefix decrement (--)
+  - [x] Postfix increment (++)
+  - [x] Postfix decrement (--)
+- Bitwise operations
+  - [x] Bitwise AND (&)
+  - [x] Bitwise OR (|)
+  - [x] Bitwise XOR (^)
+  - [x] Bitwise NOT (~)
+  - [x] Bitwise Left Shift (<<)
+  - [x] Bitwise Right Shift (>>)
+- Logical operations
+  - [x] Logical AND (&&)
+  - [x] Logical OR (||)
+  - [x] Logical NOT (!)
+- Conditional operations
+  - [x] Equality (==)
+  - [x] Inequality (!=)
+  - [x] Less than (<)
+  - [x] Less than or equal to (<=)
+  - [x] Greater than (>)
+  - [x] Greater than or equal to (>=)
+- Assignment operations
+  - [x] Basic assignment (=)
+  - [x] Addition assignment (+=)
+  - [x] Subtraction assignment (-=)
+  - [x] Multiplication assignment (\*=)
+  - [x] Division assignment (/=)
+  - [x] Modulo assignment (%=)
+  - [x] Bitwise AND assignment (&=)
+  - [x] Bitwise OR assignment (|=)
+  - [x] Bitwise XOR assignment (^=)
+  - [x] Bitwise Left Shift assignment (<<=)
+  - [x] Bitwise Right Shift assignment (>>=)
+  - [ ] Ternary operator (?:)
+- Pointers operations
+  - [x] Pointer dereference (\*)
+  - [x] Pointer addition (+)
+  - [x] Pointer subtraction (-)
+  - [x] Prefix pointer increment (++)
+  - [x] Prefix pointer decrement (--)
+  - [x] Postfix pointer increment (++)
+  - [x] Postfix pointer decrement (--)
+  - [ ] Value address (&)
+- Misc
+  - [x] Comments
+  - [x] `sizeof`
+- Preprocessor directives
+  - [x] `#define A B`
+  - [x] `#define F(x) x`
+  - [ ] `#define F(x) x ## 1`
+  - [ ] `#undef A`
+  - [ ] `#if A`
+  - [ ] `#ifdef A`
+  - [ ] `#ifndef A`
+  - [ ] `#else`
+  - [ ] `#elif A`
+  - [ ] `#endif`
+  - [ ] `#include <stdlib.h>`
+  - [ ] `#include "./locallib.h"`

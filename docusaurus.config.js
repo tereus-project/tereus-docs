@@ -96,8 +96,8 @@ const config = {
                 to: "/docs/category/how-to-use",
               },
               {
-                label: "Transpiler",
-                to: "/docs/category/transpiler",
+                label: "Transpilers",
+                to: "/docs/category/transpilers",
               },
             ],
           },
@@ -105,16 +105,8 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "Website",
+                href: "https://tereus.qtmsheep.com",
               },
             ],
           },
