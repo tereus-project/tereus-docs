@@ -15,7 +15,7 @@ Tereus is open-source, which means you can host it yourself. The source code is 
 
 ## Setting up the API and storage services
 
-The API is written in Go, and is available on [Github](git@github.com:tereus-project/tereus-api).
+The API is written in Go, and is available on [Github](https://github.com:tereus-project/tereus-api).
 
 The `docker-compose.yml` file inside the repo contains the following services:
 
