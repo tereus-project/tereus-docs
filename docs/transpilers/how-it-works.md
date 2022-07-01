@@ -197,3 +197,96 @@ And that's it!
 PASS
 ok      github.com/tereus-project/tereus-transpiler-c-go/transpiler     0.010s
 ```
+
+## `transpiler-std`: the base transpiler skeleton
+
+Our transpilers follow a common structure pattern and have to implement a set of identical features such as communicating with the queueing system, object storage, etc.
+
+To prevent code duplication and to make it easier to maintain, we have a base transpiler skeleton that can be used as a starting point.
+
+It is available on Github at [tereus-project/tereus-transpiler-std](https://github.com/tereus-project/tereus-transpiler-std/).
+
+It handles the following features:
+
+- environment variables & config
+- object storage (S3)
+- messaging (getting new jobs, submitting status, etc.)
+- prometheus metrics
+- error reporting to sentry
+- the overall transpilation flow
+
+This allows to make the transpilers simpler and easier to maintain, which a focus on the actual transpilation logic.
+
+For example, our C to Go transpiler has the following `main()`:
+
+```go title="main.go"
+
+
+package main
+
+import (
+	"github.com/tereus-project/tereus-transpiler-c-go/transpiler"
+	"github.com/tereus-project/tereus-transpiler-std/core"
+)
+
+func main() {
+	core.InitTranspiler(&core.TranspilerContextConfig{
+		SourceLanguage:              "c",
+		SourceLanguageFileExtension: ".c",
+		TargetLanguage:              "go",
+		TargetLanguageFileExtension: ".go",
+		TranspileFunction:           transpiler.Remix,
+	})
+}
+```
+
+As you can see, it is very simple. The transpiler only has to implement the `TranspileFunction` function, which is called when a new job is received.
+
+For this transpiler, it looks like this:
+
+```go title="transpiler.go"
+func Remix(entrypoint string) (string, error) {
+	preprocessor, err := NewPreprocessor(entrypoint)
+	if err != nil {
+		return "", err
+	}
+
+	preprocessed, err := preprocessor.Preprocess()
+	if err != nil {
+		return "", err
+	}
+
+	visitor := NewVisitor(entrypoint, preprocessed)
+
+	input := antlr.NewInputStream(visitor.Code)
+	lexer := parser.NewCLexer(input)
+	stream := antlr.NewCommonTokenStream(lexer, 0)
+	p := parser.NewCParser(stream)
+	p.Interpreter.SetPredictionMode(antlr.PredictionModeSLL)
+	p.RemoveErrorListeners()
+
+	errorListener := NewRemixerErrorListener(entrypoint)
+	p.AddErrorListener(errorListener)
+
+	tree := p.Translation()
+
+	if len(errorListener.Errors) > 0 {
+		return "", fmt.Errorf("%s", strings.Join(errorListener.Errors, "\n"))
+	}
+
+	output, err := visitor.VisitTranslation(tree.(*parser.TranslationContext))
+	if err != nil {
+		return "", err
+	}
+
+	return output, nil
+}
+```
+
+Here we can see that we only have the transpiling logic (lexer, parser, visitor, etc.).
+
+### Github template for a transpiler
+
+We crated a transpiler template git repository on Github, that is based on the `transpiler-std` skeleton.
+
+It is available on Github at [tereus-project/tereus-transpiler-template](https://github.com/tereus-project/tereus-transpiler-template/).
