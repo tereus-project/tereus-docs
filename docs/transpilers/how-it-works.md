@@ -14,7 +14,30 @@ We use ANLTR to parse the source code into a AST (Abstract Syntax Tree).
 
 ## Architecture
 
-mermaaaaid
+```mermaid
+flowchart TB
+    subgraph internal[Internal]
+        subgraph queue["Queueing System (nsq)"]
+            jobQueue[transpilation_jobs_a_to_b]
+            statusQueue[transpilation_submission_status]
+        end
+        s3[Object Storage]
+    end
+
+    subgraph transpiler[Transpiler]
+        s3 --> getFiles([Get files])
+        getFiles --> preprocessing[Preprocessing]
+        preprocessing --> lexer[Lexer]
+        lexer --> parser[Parser]
+        parser --> ast["Target language AST"]
+        ast --> string[String Output]
+        string --> s3
+    end
+
+    jobQueue --> transpiler
+    transpiler --> statusQueue
+
+```
 
 ## How to add a supported feature to the transpiler
 
