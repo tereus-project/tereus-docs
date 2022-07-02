@@ -24,13 +24,13 @@
 - Statements
   - [x] `if`
   - [x] `for`
-  - [ ] `do`
+  - [x] `do`
   - [x] `while`
-  - [ ] `switch`
-  - [ ] `case`
-  - [ ] `default`
+  - [x] `switch`
+  - [x] `case`
+  - [x] `default`
   - [x] `break`
-  - [ ] `continue`
+  - [x] `continue`
   - [x] `return`
   - [x] `goto`
 - Expressions
@@ -80,7 +80,7 @@
   - [x] Bitwise XOR assignment (^=)
   - [x] Bitwise Left Shift assignment (<<=)
   - [x] Bitwise Right Shift assignment (>>=)
-  - [ ] Ternary operator (?:)
+  - [x] Ternary operator (?:)
 - Pointers operations
   - [x] Pointer dereference (\*)
   - [x] Pointer addition (+)
