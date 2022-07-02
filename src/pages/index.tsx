@@ -1,10 +1,10 @@
-import React from "react";
-import clsx from "clsx";
-import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import styles from "./index.module.css";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import Layout from "@theme/Layout";
+import clsx from "clsx";
+import React from "react";
+import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -18,7 +18,14 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/discover"
           >
-            Discover Tereus - 5min ⏱️
+            Discover Tereus 📖
+          </Link>
+          <Link
+            style={{ marginLeft: "1em" }}
+            className="button button--secondary button--lg"
+            to="https://tereus.dev"
+          >
+            Launch Tereus 🚀
           </Link>
         </div>
       </div>
@@ -30,7 +37,7 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Welcome`}
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
