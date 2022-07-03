@@ -106,3 +106,56 @@
   - [ ] `#endif`
   - [ ] `#include <stdlib.h>`
   - [ ] `#include "./locallib.h"`
+- Standard Library
+  - `stdlib.h`
+    - [ ] `atof`
+    - [ ] `atoi`
+    - [ ] `atol`
+    - [ ] `strtod`
+    - [ ] `strtol`
+    - [ ] `strtoul`
+    - [ ] `calloc`
+    - [x] `free`
+    - [x] `malloc`
+    - [ ] `realloc`
+    - [ ] `abort`
+    - [ ] `atexit`
+    - [ ] `exit`
+    - [ ] `getenv`
+    - [ ] `system`
+    - [ ] `bsearch`
+    - [ ] `qsort`
+    - [ ] `abs`
+    - [ ] `div`
+    - [ ] `labs`
+    - [ ] `ldiv`
+    - [ ] `rand`
+    - [ ] `srand`
+    - [ ] `mblen`
+    - [ ] `mbstowcs`
+    - [ ] `mbtowc`
+    - [ ] `wcstombs`
+    - [ ] `wctomb`
+  - `assert.h`
+    - [x] `assert`
+  - `string.h`
+    - [x] `memset`
+    - [x] `memchr`
+    - [x] `memcmp`
+    - [x] `memcpy`
+    - [x] `memmove`
+    - [x] `strcat`
+    - [x] `strncat`
+    - [x] `strchr`
+    - [x] `strcmp`
+    - [x] `strncmp`
+    - [x] `strcoll`
+    - [x] `strncpy`
+    - [x] `strcspn`
+    - [ ] `strerror`
+    - [x] `strlen`
+    - [x] `strpbrk`
+    - [x] `strrchr`
+    - [x] `strspn`
+    - [ ] `strtok`
+    - [ ] `strxfrm`
