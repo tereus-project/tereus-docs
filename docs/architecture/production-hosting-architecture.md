@@ -8,7 +8,7 @@ Tereus is powered by multiple cloud providers and is designed to be scalable and
 
 Here is an overview of our production architecture:
 
-![](./img/archi.svg)
+![](./img/archi.png)
 
 Links to the services we use:
 
