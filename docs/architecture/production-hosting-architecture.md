@@ -17,6 +17,7 @@ Links to the services we use:
 - [Digital Ocean](https://www.digitalocean.com/)
 - [Cloudflare Pages](https://pages.cloudflare.com/)
 - [Stripe](https://stripe.com/)
+- [Sentry](https://sentry.io/)
 
 Our tech stack:
 
