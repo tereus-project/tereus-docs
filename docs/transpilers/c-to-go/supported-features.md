@@ -11,7 +11,7 @@
     - [x] Sized
     - [ ] Unsized
   - [x] Multiple inline variables declaration
-    - [ ] With pointers
+    - [x] With pointers
 - Functions
   - [ ] Declaration with no definition
   - [x] Declaration with definition
