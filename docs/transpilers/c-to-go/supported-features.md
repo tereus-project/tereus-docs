@@ -93,6 +93,8 @@
   - [x] Value address (&)
 - Misc
   - [x] Comments
+    - [x] Single-line comments
+    - [x] Multi-line comments
   - [x] `sizeof`
 - Preprocessor directives
   - [x] `#define A B`
