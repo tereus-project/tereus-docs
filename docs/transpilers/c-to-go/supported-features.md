@@ -6,21 +6,22 @@
   - [x] Assignment
   - [x] Automatic type conversion
   - [x] Variable list
-  - [ ] Array variables declaration
+  - [x] Array variables declaration
 - Functions
   - [ ] Declaration with no definition
   - [x] Declaration with definition
   - [x] Arguments
 - Types
   - [x] Pointers
-  - [ ] Arrays
+  - [x] Arrays
+    - [x] Multi-dimensional arrays
   - Structures
     - [x] Declaration with no definition
     - [x] Declaration with definition
     - [x] Initialization
   - [ ] Unions
   - [x] Enums
-  - [ ] Typedefs
+  - [x] Typedefs
 - Statements
   - [x] `if`
   - [x] `for`
@@ -89,7 +90,7 @@
   - [x] Prefix pointer decrement (--)
   - [x] Postfix pointer increment (++)
   - [x] Postfix pointer decrement (--)
-  - [ ] Value address (&)
+  - [x] Value address (&)
 - Misc
   - [x] Comments
   - [x] `sizeof`
