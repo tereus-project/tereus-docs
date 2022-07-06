@@ -2,15 +2,21 @@
 
 - Variables
   - [x] Declaration
+    - [x] Global variables
   - [x] Initialization
   - [x] Assignment
   - [x] Automatic type conversion
   - [x] Variable list
   - [x] Array variables declaration
+    - [x] Sized
+    - [ ] Unsized
+  - [x] Multiple inline variables declaration
+    - [ ] With pointers
 - Functions
   - [ ] Declaration with no definition
   - [x] Declaration with definition
   - [x] Arguments
+  - [x] Recursion
 - Types
   - [x] Pointers
   - [x] Arrays
@@ -25,6 +31,8 @@
 - Statements
   - [x] `if`
   - [x] `for`
+    - [ ] With empty body
+    - [ ] With multiple increments
   - [x] `do`
   - [x] `while`
   - [x] `switch`
